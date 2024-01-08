@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Infocomn Website</title>
+    <script src="tags.js"></script>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, .btn, .navbar-brand, .nav-link, .card-title, .card-text, .card-footer, footer {
+            font-family: 'Poppins', sans-serif;
+        }
+        .custom-container {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        }
+
+    
+
+    
+
+        .larger-bi-icons .bi {
+            /* Adjust the size of Bootstrap Icons */
+            font-size: 3rem; /* Change this value to adjust the size */
+            display: block;
+            margin-bottom: 10px; /* Adjust the space between icon and text */
+        }
+
+        .icon-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        .icon-description p {
+            margin-top: -80px; /* Reduce this value to move the text closer to the icon */
+        margin-bottom: 100px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+    #notificationIcon {
+        margin-right: 25px; 
+    }
+    .person-icon{
+        margin-right: 80px;
+    }
+
+    .avatar-online {
+        border: 2px solid green;
+        border-radius: 50%;
+        padding: 3px;
+        cursor: pointer;
+    }
+    .avatar-offline {
+        border: 2px solid grey;
+        border-radius: 50%;
+        padding: 3px;
+        cursor: pointer;
+    }
+    .read {
+    color: grey; 
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <nav style="background-color: orange;" class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand me-3" href="#">SOI Learning Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">HTML</a></li>
+                            <li><a class="dropdown-item" href="#">CSS</a></li>
+                            <li><a class="dropdown-item" href="#">PHP</a></li>
+                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                            <li><a class="dropdown-item" href="#">Python</a></li>
+                            <li><a class="dropdown-item" href="#">Java</a></li>
+                            <li><a class="dropdown-item" href="#">iOS</a></li>
+                            <li><a class="dropdown-item" href="#">React</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                 <div class="dropdown">
+                    <a class="nav-link" href="#" id="notificationIcon" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-bell-fill" style="color:white"></i>
+                    </a>
+        
+                    <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="notificationIcon">
+                        <li><h6 class="dropdown-header">Unread Messages</h6></li>
+                        <li><a class="dropdown-item" href="#">New Class Available!</a></li>
+                        <li><a class="dropdown-item" href="#">2024 Schedule</a></li>
+        
+                        <li><hr class="dropdown-divider"></li>
+        
+                        <li><h6 class="dropdown-header">Read Messages</h6></li>
+                        <li><a class="dropdown-item read" href="#">Enrolment has Started!</a></li>
+                        <li><a class="dropdown-item read" href="#">New Class Available!</a></li>
+                    </ul>
+                 </div>
+                 </div>
+                 <a class="nav-link person-icon" href="#">
+                    <img id="avatar" class="bi bi-person-circle avatar-online" style="color: white; width: 50px; height: 50px;" src="OIP.jpg" alt="Avatar" onclick="toggleAvatar()">
+                </a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>SOI Learning Portal</h1>
+                <p>Expertly crafted courses that best fit your learning needs and preferences.</p>
+                <a href="#" class="btn btn-dark me-2">Browse</a>
+                <a href="#" class="btn btn-secondary">Be an Instructor</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Hero Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <i class="bi bi-book larger-bi-icons"></i>
+                </div>
+                <div class="icon-description">
+                    <p style="color: black;"><b>158 Online Courses</b></p>
+                    <p>Enjoy a variety of fresh topics</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <i class="bi bi-person larger-bi-icons"></i>
+                </div>
+                <div class="icon-description">
+                    <p style="color: black;"><b>Expert Instruction</b></p>
+                    <p>Find the right instructor for you</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <i class="bi bi-clock larger-bi-icons"></i>
+                </div>
+                <div class="icon-description">
+                    <p style="color: black;"><b>Lifetime Access</b></p>
+                    <p>Learn on your schedule</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <p style="font-size: 24px;">Featured Content</p>
+    </div>
+
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- First 4 cards -->
+              <!-- Replace the content with your actual card structure -->
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" class="card-img-top" alt="Card Image 1">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>Introduction to HTML and CSS</b></h5>
+                        <i class="bi bi-clock"></i> 2 Hr 30 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Hannah Lim</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlciUyMGV4cGVyaWVuY2V8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Card Image 2">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>User Experience and Interior Design</b></h5>
+                        <i class="bi bi-clock"></i> 2 Hr 45 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Julia Lee</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_1280.jpg" class="card-img-top" alt="Card Image 3">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>iOS App Development using XCode and Swift</b></h5>
+                        <i class="bi bi-clock"></i> 4 Hr 30 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Ryan Low</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnJvbnQlMjBlbmR8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Card Image 4">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>Front-end JavaScript Frameworks</b></h5>
+                        <i class="bi bi-clock"></i> 3 Hr 45 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Ashar Kamar</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <!-- Next 4 cards -->
+              <!-- Replace the content with your actual card structure -->
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnJvbnQlMjBlbmR8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Card Image 4">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>Web Developmental</b></h5>
+                        <i class="bi bi-clock"></i> 4 Hr
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Gerent Tan</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_1280.jpg" class="card-img-top" alt="Card Image 3">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>App Testing</b></h5>
+                        <i class="bi bi-clock"></i> 4 Hr 30 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Samuel San</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlciUyMGV4cGVyaWVuY2V8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Card Image 2">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>Digitalisation</b></h5>
+                        <i class="bi bi-clock"></i> 2 Hr 45 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Melinda Lim</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" class="card-img-top" alt="Card Image 1">
+                    <div style="background-color: orange;" class="card-body">
+                        <h5 class="card-title"><b>Advanced Programming</b></h5>
+                        <i class="bi bi-clock"></i> 4 Hr 30 mins
+                    </div>
+                    <div style="background-color: orange;" class="card-footer d-flex justify-content-between align-items-center align-items-center">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill"></i> <span class="ms-2">Justin Soh</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark addToBookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    
+
+        <div class="container mt-5">
+            <p style="font-size: 24px;">Bookmarked Content</p>
+            <div class="row" id="bookmarkedCardsRow">
+                
+            </div>
+        </div>
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 SOI Learning Portal</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-light me-4">Privacy</a>
+                    <a href="#" class="text-light me-4">Terms</a>
+                    <a href="#" class="text-light me-4">Feedback</a>
+                    <a href="#" class="text-light">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleAvatar() {
+            const avatar = document.getElementById('avatar');
+            if (avatar.classList.contains('avatar-online')) {
+                avatar.classList.remove('avatar-online');
+                avatar.classList.add('avatar-offline');
+            } else {
+                avatar.classList.remove('avatar-offline');
+                avatar.classList.add('avatar-online');
+            }
+        }
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    document.addEventListener('DOMContentLoaded', function() {
+    var bookmarkIcons = document.querySelectorAll('.addToBookmark');
+
+    bookmarkIcons.forEach(function(bookmarkIcon) {
+        bookmarkIcon.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the link or button
+            addToBookmarks(this);
+        });
+    });
+
+    function addToBookmarks(iconElement) {
+    var cardDetails = iconElement.closest('.card').cloneNode(true);
+    var bookmarkIcon = cardDetails.querySelector('.addToBookmark');
+    bookmarkIcon.remove();
+
+    var bookmarkedCardsRow = document.getElementById('bookmarkedCardsRow');
+    var colElement = document.createElement('div');
+    colElement.classList.add('col-lg-3', 'col-md-6', 'mb-4');
+    var cardContainer = document.createElement('div');
+    cardContainer.classList.add('card');
+    cardContainer.appendChild(cardDetails);
+
+    colElement.appendChild(cardContainer);
+    bookmarkedCardsRow.appendChild(colElement);
+
+    bookmarkIcon.style.color = 'black';
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+}
+});
+    </script>
+</body>
+
+</html>
